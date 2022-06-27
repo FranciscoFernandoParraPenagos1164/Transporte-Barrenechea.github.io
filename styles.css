@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: #0066ff;
+    font-family: Arial;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+}
+
+#main {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    animation: texto 1.5s forwards;
+}
+
+.main-content h2 {
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.main-content h3 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.main-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-content ul:first-of-type {
+    text-align: left;
+    align-self: center;
+}
+
+.main-content ul:last-child li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content li img {
+    margin: 0 5px;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    width: 50%;
+    transform: translateX(200vh);
+    animation: carro 1.5s forwards .5s;
+}
+
+.main-img img {
+    width: 100%;
+}
+
+@keyframes texto {
+    from {
+        transform: translateY(200px);
+        filter: opacity(0);
+    }
+
+    to {
+        filter: opacity(1);
+    }
+}
+
+@keyframes carro {
+    from {
+        filter: opacity(0);
+    }
+
+    to {
+        transform: translateX(-30px);
+        filter: opacity(1);
+    }
+}
+
+@media screen and (max-width:1000px) and (max-height:1500px) {
+    header {
+        font-size: 30px;
+    }
+
+    #main {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .main-content {
+        width: 80%;
+    }
+
+    .main-img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:320px) and (max-height:480px) {
+    header {
+        font-size: 25px;
+    }
+
+    #main {
+        margin-top: 10px;
+    }
+
+    @keyframes carro {
+        from {
+            filter: opacity(0);
+        }
+
+        to {
+            transform: translateX(-10px);
+            filter: opacity(1);
+        }
+    }
+}
